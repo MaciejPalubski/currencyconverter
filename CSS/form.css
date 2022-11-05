@@ -1,0 +1,50 @@
+.form {
+    max-width: 500px;
+    margin: 100px auto;
+    border-radius: 20px;
+    background-color: #f4eaea;
+    padding: 10px;
+    box-shadow: 0px 10px 17px 7px #868E86;
+    font-family: 'Lato', sans-serif;
+}
+
+.form__label {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.form__fieldset {
+    border-radius: 10px;
+    background-color: #d3cfcf;
+    border: 5px groove rgb(141, 141, 141);
+}
+
+.form__legend {
+    font-size: 30px;
+    text-align: center;
+    background-color: #352c20d0;
+    color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form__amount {
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.form__button {
+    font-size: 30px;
+    text-align: center;
+    background-color: #352c20d0;
+    color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form__paragraph {
+    margin: 10px;
+
+}
