@@ -1,5 +1,5 @@
 .form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 100px auto;
     border-radius: 20px;
     background-color: #f4eaea;
@@ -15,6 +15,7 @@
 }
 
 .form__fieldset {
+
     border-radius: 10px;
     background-color: #d3cfcf;
     border: 5px groove rgb(141, 141, 141);
@@ -48,10 +49,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
+
 }
 
 .form__paragraph {
     margin: 10px;
 
+}
+
+.body {
+    background-image: url("../images/background1.jpg");
+    max-width: 1000px;
+    margin: auto;
+    background-size: auto;
 }
