@@ -36,12 +36,19 @@
 }
 
 .form__button {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
-    background-color: #352c20d0;
+    background-color: #88755bd0;
     color: #eee;
     padding: 10px;
     border-radius: 5px;
+}
+
+.form__button--stretched {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
 }
 
 .form__paragraph {
