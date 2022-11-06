@@ -1,37 +1,44 @@
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-currency");
-let formElement = document.querySelector(".js-form");
-let resultElement = document.querySelector(".js-result");
+{
+    const calculateResult = (amount, currency) => {
+        const rateEUR = "4.78";
+        const rateUSD = "4.84";
+        const rateGBP = "5.48";
+        switch (currency) {
+            case "EUR":
+                return amount / rateEUR;
 
+            case "USD":
+                return amount / rateUSD;
 
-let rateEUR = "4.78";
-let rateUSD = "4.84";
-let rateGBP = "5.48";
-
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let currency = currencyElement.value;
-    let amount = +amountElement.value;
-
-    let result;
-
-    switch (currency) {
-        case "EUR":
-            result = amount / rateEUR;
-            break;
-
-        case "USD":
-            result = amount / rateUSD;
-            break;
-
-        case "GBP":
-            result = amount / rateGBP;
-            break;
+            case "GBP":
+                return amount / rateGBP;
+        }
     }
 
+    const updateResultText = (amount, result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
+    }
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+        const currency = currencyElement.value;
+        const amount = +amountElement.value;
+        const result = calculateResult(amount, currency);
+
+        updateResultText(amount, result, currency);
+    }
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+        formElement.addEventListener("submit", onFormSubmit);
+
+        
+    };
 
 
-    resultElement.innerText = result.toFixed(2);
-});
+    init();
+}
