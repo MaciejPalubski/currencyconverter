@@ -1,4 +1,4 @@
-# Maciej Pałubski - homepage
+# Currency converter
 
 ## Demo
 
